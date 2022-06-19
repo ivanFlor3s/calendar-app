@@ -1,7 +1,7 @@
 import { Calendar, luxonLocalizer } from "react-big-calendar";
 import { DateTime } from "luxon";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { CalendarEvent, Navbar } from "../";
+import { CalendarEvent, Navbar, CalendarModal } from "../";
 import { useState } from "react";
 
 const localizer = luxonLocalizer(DateTime, { firstDayOfWeek: 7 });
@@ -52,6 +52,9 @@ export const CalendarScreen = () => {
         onSelectEvent={onSelect}
         onView = {onViewChanged}
       ></Calendar>
+
+
+      <CalendarModal></CalendarModal>
     </div>
   );
 };
